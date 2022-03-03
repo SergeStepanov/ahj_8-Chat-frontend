@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(6, 0, 87);
+  background-color: rgb(231, 231, 231);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 10px;
+  background: url(../img/fon.jpg);
+  background-size: cover;
+}
+/* Botton ticket add */
+.btn-add {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: 5%;
+  background-color: brown;
+  border: none;
+  border-radius: 5px;
+  color: antiquewhite;
+
+  transition-property: background-color, cursor;
+  transition-duration: 0.6s, 0.3s;
+  transition-timing-function: linear, linear;
+}
+
+.btn-add:hover {
+  background-color: rgb(187, 116, 3);
+  cursor: pointer;
+}
+
+/* Tickets */
+.cards {
+  width: 90%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+/* ticet */
+.card {
+  display: flex;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  min-height: 30px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  margin-bottom: 4px;
+  padding-top: 3px;
+}
+
+.card__content {
+  padding: 0 10px;
+  flex: 1 70%;
+  cursor: pointer;
+}
+
+.card__header {
+  display: flex;
+}
+
+.card__name {
+  flex: 1 70%;
+}
+
+.card__description {
+  margin-top: 10px;
+}
+
+/* bottom Ticket */
+.btn__card {
+  width: 25px;
+  height: 25px;
+  margin: 0 2px;
+  border: 3px solid rgb(110, 109, 109);
+  border-radius: 50%;
+
+  transition-property: background-color, border;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: linear, linear;
+}
+
+.btn__card:hover {
+  border: 2px solid rgb(46, 38, 38);
+  background-color: rgb(224, 164, 164);
+}
+
+/* popap */
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.form {
+  width: 400px;
+  /* height: 250px; */
+  border: 1px solid rgb(3, 160, 139);
+  border-radius: 15px;
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form__name,
+.form__description {
+  width: 100%;
+  margin: 5px 0;
+  padding: 2px;
+  border: 1px solid rgb(3, 160, 139);
+  border-radius: 3px;
+}
+
+.form__name {
+  min-height: 25px;
+}
+
+.form__description {
+  min-height: 60px;
+  resize: none
+}
+
+.form__btn {
+  text-align: right;
+}
+
+.btn__false, .btn__true {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn__false {
+  min-width: 60px;
+  background-color: rgb(255, 113, 180);
+}
+
+.btn__true {
+  min-width: 40px;
+  background-color: rgb(165, 250, 116);
+}
+
+.btn__false:hover {
+  background-color: rgb(255, 4, 121);
+
+}
+
+.btn__true:hover {
+  background-color: rgb(83, 221, 4);
+}
