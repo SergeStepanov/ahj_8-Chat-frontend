@@ -9,97 +9,7 @@ body {
   background-color: rgb(231, 231, 231);
 }
 
-.hidden {
-  display: none;
-}
-
-.container {
-  width: 100%;
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 10px;
-  background: url(../img/fon.jpg);
-  background-size: cover;
-}
-/* Botton ticket add */
-.btn-add {
-  display: block;
-  padding: 10px;
-  margin: 10px;
-  margin-left: auto;
-  margin-right: 5%;
-  background-color: brown;
-  border: none;
-  border-radius: 5px;
-  color: antiquewhite;
-
-  transition-property: background-color, cursor;
-  transition-duration: 0.6s, 0.3s;
-  transition-timing-function: linear, linear;
-}
-
-.btn-add:hover {
-  background-color: rgb(187, 116, 3);
-  cursor: pointer;
-}
-
-/* Tickets */
-.cards {
-  width: 90%;
-  margin: 0 auto;
-  list-style-type: none;
-}
-
-/* ticet */
-.card {
-  display: flex;
-  flex-wrap: nowrap;
-
-  width: 100%;
-  min-height: 30px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 5px;
-  margin-bottom: 4px;
-  padding-top: 3px;
-}
-
-.card__content {
-  padding: 0 10px;
-  flex: 1 70%;
-  cursor: pointer;
-}
-
-.card__header {
-  display: flex;
-}
-
-.card__name {
-  flex: 1 70%;
-}
-
-.card__description {
-  margin-top: 10px;
-}
-
-/* bottom Ticket */
-.btn__card {
-  width: 25px;
-  height: 25px;
-  margin: 0 2px;
-  border: 3px solid rgb(110, 109, 109);
-  border-radius: 50%;
-
-  transition-property: background-color, border;
-  transition-duration: 0.3s, 0.3s;
-  transition-timing-function: linear, linear;
-}
-
-.btn__card:hover {
-  border: 2px solid rgb(46, 38, 38);
-  background-color: rgb(224, 164, 164);
-}
-
-/* popap */
+/* popup */
 .popup {
   display: flex;
   justify-content: center;
@@ -109,67 +19,147 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(26, 25, 25, 0.5);
 }
 
-.form {
+.popup-form {
   width: 400px;
-  /* height: 250px; */
   border: 1px solid rgb(3, 160, 139);
   border-radius: 15px;
   background-color: rgb(241, 241, 241);
   padding: 10px;
-}
-
-.form__title {
   text-align: center;
-  margin-bottom: 15px;
-}
-
-.form__name,
-.form__description {
-  width: 100%;
-  margin: 5px 0;
-  padding: 2px;
-  border: 1px solid rgb(3, 160, 139);
-  border-radius: 3px;
 }
 
 .form__name {
+  width: 100%;
   min-height: 25px;
-}
-
-.form__description {
-  min-height: 60px;
-  resize: none
+  margin: 15px 0;
+  padding: 2px;
+  padding-left: 5px;
+  border: 1px solid rgb(7, 10, 10);
+  border-radius: 3px;
+  outline: none;
 }
 
 .form__btn {
-  text-align: right;
-}
-
-.btn__false, .btn__true {
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
+  width: 70%;
+  padding: 7px;
+  border: 1px solid rgb(3, 160, 139);
+  border-radius: 3px;
   cursor: pointer;
+  transition: border 0.3s, background-color 0.3s;
 }
 
-.btn__false {
-  min-width: 60px;
-  background-color: rgb(255, 113, 180);
+.form__btn:hover {
+  border: 1px solid rgb(113, 251, 233);
+  background-color: #fff;
 }
 
-.btn__true {
-  min-width: 40px;
-  background-color: rgb(165, 250, 116);
+.popover {
+  width: 250px;
+  text-align: left;
+  position: absolute;
+  background-color: rgb(253, 249, 231);
+  border: 2px solid red;
+  padding: 5px;
+  z-index: 999;
 }
 
-.btn__false:hover {
-  background-color: rgb(255, 4, 121);
-
+/* chat box */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 10px;
+  background: url(../img/fon.jpg);
+  background-size: cover;
 }
 
-.btn__true:hover {
-  background-color: rgb(83, 221, 4);
+ul {
+  list-style-type: none;
+}
+/* chat user */
+.chat__users {
+  width: 25%;
+  height: 300px;
+  margin-top: 10px;
+  background-color: rgb(245, 255, 151);
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.user__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.nickname {
+  color: rgb(197, 7, 7);
+}
+
+.user__logo {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(3, 160, 139);
+  border-radius: 50%;
+  margin-right: 5px;
+  /* background: url(../img/fon.jpg); */
+}
+
+/* chat message */
+.chat__messages {
+  width: 75%;
+  height: 500px;
+  background-color: rgb(184, 255, 151);
+  padding: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.messages,
+.users {
+  overflow-x: hidden;
+}
+
+.user__message {
+  width: 70%;
+  background-color: rgb(220, 250, 207);
+  padding: 2px;
+  /* border: 1px solid rgb(2, 1, 1); */
+  margin: 5px 0;
+}
+
+.user {
+  margin-left: auto;
+}
+
+.user div.message__header {
+  text-align: right;
+  color: rgb(197, 7, 7);
+}
+
+.message__header {
+  margin-bottom: 10px;
+}
+
+/* chat input */
+.chat__input {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  padding: 2px;
+  padding-left: 5px;
+  margin: 10px 0;
 }

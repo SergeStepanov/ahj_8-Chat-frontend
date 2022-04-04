@@ -28,7 +28,7 @@
     "url": "https://github.com/SergeStepanov/ahj_8-Chat-frontend/issues"
   },
   "homepage": "https://github.com/SergeStepanov/ahj_8-Chat-frontend#readme",
-    "devDependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.10",
